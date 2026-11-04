@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="La tierra tiene memoria. Un recorrido para comprender la disputa territorial de Villa Mascardi y la comunidad Lof Lafken Winkul Mapu."
+    />
+    <meta name="theme-color" content="#fffae1" />
+    <title>Un territorio no es solo tierra — Villa Mascardi</title>
+
+    <!--
+      ACUMIN PRO (Adobe Fonts)
+      1. En fonts.adobe.com creá un "Proyecto web" con Acumin Pro Wide → Ultra Black (900).
+      2. Reemplazá TU-KIT por el ID del proyecto y descomentá la línea.
+      Mientras no esté cargado, los títulos usan Archivo Expanded Black como reemplazo.
+    -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/TU-KIT.css" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Filtro de papel rasgado: lo usan todos los recortes del collage -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+      <filter id="torn" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="4" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" data-header>
+      <a class="site-id" href="#inicio" aria-label="Ir al inicio">
+        <span>41.3496° S</span>
+        <span>71.5090° O</span>
+      </a>
+
+      <p class="site-title">La tierra tiene memoria<br /></p>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Índice</span>
+        <span aria-hidden="true">↘</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Índice del recorrido">
+        <a href="#situacion">Situar</a>
+        <a href="#disputa">Entender</a>
+        <a href="#rewe">Reconocer</a>
+        <a href="#cronologia">Recordar</a>
+        <a href="#derechos">Leer</a>
+        <a href="#voz">Escribir</a>
+        <a href="#presente">Actuar</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- 00 · HERO -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        
+
+        <svg class="hero-tear hero-tear-b" viewBox="0 0 300 420" aria-hidden="true">
+          <g filter="url(#torn)">
+            <path class="paper-oxido" d="M120-20h200v440H210l-30-90 40-80-60-70 20-90-60-60z" />
+            <path class="paper-verde" d="M220 300l100-30v170H160z" />
+          </g>
+        </svg>
+
+        <svg class="hero-topography" viewBox="0 0 1000 740" aria-hidden="true">
+          <g class="contour contour-a">
+            <path d="M31 597C157 516 129 415 245 361c97-45 155 15 231-41 67-49 76-151 180-189 101-37 201 6 317-74" />
+            <path d="M11 643c147-89 140-184 253-242 97-50 169 7 245-52 71-55 79-157 178-197 100-40 188-4 306-82" />
+            <path d="M-8 691c168-95 153-195 286-255 95-43 168 11 250-56 70-57 81-151 177-191 97-40 175-10 306-83" />
+            <path d="M53 553c111-76 98-167 210-216 83-37 145 5 218-42 79-51 77-162 181-201 98-36 184 4 284-69" />
+          </g>
+          <g class="contour contour-b">
+            <path d="M54 226c117 26 158-57 245-63 92-6 123 70 227 45 86-20 100-95 194-95 97 0 143 79 240 49" />
+            <path d="M37 183c118 30 158-50 252-56 96-7 128 67 225 43 89-22 107-97 198-98 96-1 146 79 251 43" />
+          </g>
+        </svg>
+
+        <div class="hero-kicker reveal">
+          <span class="eyebrow">Villa Mascardi</span>
+          <span>Río Negro · Argentina</span>
+          <span>RN 40 · KM 2006</span>
+          <span>2017—2026</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title" aria-label="Un territorio no es solo tierra">
+          <span class="hero-line">Un territorio</span>
+          <span class="hero-line tone-arena">no es solo</span>
+          <span class="hero-line tone-oxido">tierra</span>
+        </h1>
+
+        <div class="hero-lower">
+          <figure class="collage reveal">
+            <div
+              class="photo collage-photo"
+              style="--img: url('assets/img/hero.jpg')"
+              role="img"
+              aria-label="Integrante de la comunidad Lafken Winkul Mapu frente al lago Mascardi"
+            >
+              <span class="photo-slot" aria-hidden="true">assets/img/hero.jpg</span>
+            </div>
+            <svg class="collage-papers" viewBox="0 0 600 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g filter="url(#torn)">
+                <path class="paper-verde" d="M430-20h190v250l-60-20-50 40-60-70 20-80-50-50z" />
+                <path class="paper-oxido" d="M-20 300l90-40 70 50 60-10 40 90H-20z" />
+                <path class="paper-beige" d="M470 250l110-20 30 160H450z" />
+              </g>
+              <path class="paper-route" d="M450 0c20 70-10 120 40 170s30 110 80 150" />
+            </svg>
+            <p class="map-chip collage-chip-a">Villa Mascardi</p>
+            <p class="map-chip collage-chip-b">Lago Mascardi</p>
+            <figcaption>
+              Villa Mascardi, Río Negro · Composición visual sobre el vínculo entre territorio, identidad y memoria.
+            </figcaption>
+          </figure>
+
+          <div class="hero-aside reveal">
+            <blockquote class="cita">
+              <p><span>El rewe está plantado a la tierra, y la tierra somos nosotros y nosotras</span></p>
+              <footer>
+                <strong>Betiana Colhuan Nahuel</strong> · Machi de la comunidad Lafken Winkul Mapu. Entrevista en
+                Las12 / Página/12, 2 de junio de 2023. <a href="#fuente-15">[15]</a>
+              </footer>
+            </blockquote>
+
+            <p class="hero-lead">
+              Un recorrido para comprender la disputa territorial y judicial que atraviesa a la comunidad mapuche
+              Lof Lafken Winkul Mapu en Villa Mascardi.
+            </p>
+
+            <div class="hero-sign">
+              <p class="signature">La tierra tiene memoria<br />Lafken Winkul Mapu / Villa Mascardi</p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 · SITUAR -->
+      <section class="locator section" id="situacion" aria-labelledby="situacion-title">
+        <header class="section-heading reveal">
+          <h2 id="situacion-title">¿Dónde <span class="tone-arena">ocurre?</span></h2>
+        </header>
+
+        <div class="locator-grid">
+          <div class="coordinate-stage" data-coordinate-stage>
+            <div class="coordinate-crosshair" aria-hidden="true"></div>
+            <svg viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path class="map-lake" d="M120 190c60-40 150-30 210 10s110 120 190 130 130 60 120 120-90 70-160 40-130-80-210-90-170-30-190-90 0-80 40-120z" />
+              <g class="map-contours">
+                <path d="M-23 489c123-33 146-119 236-150 101-35 175 32 265-11 102-48 96-158 201-194 65-22 117-15 167-8" />
+                <path d="M-6 530c136-36 163-124 250-154 99-34 176 27 270-19 97-47 97-156 192-194 60-24 113-21 162-14" />
+                <path d="M23 574c140-37 174-125 261-158 94-35 176 20 269-26 92-46 98-148 190-190 49-22 97-25 140-22" />
+                <path d="M-48 446c110-27 131-109 224-141 103-35 173 37 263-3 108-48 100-163 211-195 70-21 124-10 176-2" />
+                <path d="M-30 120c90 20 160-40 260-20s140 60 240 30 150-90 360-60" />
+                <path d="M-30 80c100 20 170-40 270-20s150 60 250 30 160-90 340-60" />
+              </g>
+              <g filter="url(#torn)">
+                <path class="paper-oxido map-paper" d="M640 560l90-50 90 30v120H600z" />
+                <path class="paper-beige map-paper" d="M-20 560l110 10 30 90H-20z" />
+              </g>
+              <path class="route" d="M581-8c7 94-10 158 19 238 27 73 101 116 91 201-9 78-88 114-94 219" />
+              <g class="site-marker">
+                <circle cx="647" cy="374" r="32" />
+                <circle cx="647" cy="374" r="8" />
+              </g>
+            </svg>
+            <p class="map-chip map-label-a">Lago Mascardi</p>
+            <p class="map-chip map-chip-lima map-label-b">Villa Mascardi</p>
+            <p class="map-chip map-label-c">Ruta Nacional 40</p>
+            <div class="live-coordinate" aria-hidden="true">
+              <span data-live-lat>41.3496° S</span>
+              <span data-live-lon>71.5090° O</span>
+            </div>
+          </div>
+
+          <div class="locator-copy">
+            <p class="lead reveal">
+              A unos 35 kilómetros al sur de Bariloche, la ruta atraviesa un territorio donde conviven parcelas
+              estatales, propiedades privadas, un parque nacional y un reclamo de pertenencia ancestral.
+            </p>
+
+            <dl class="fact-list reveal">
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Villa Mascardi, Río Negro</dd>
+              </div>
+              <div>
+                <dt>Comunidad</dt>
+                <dd>Lof Lafken Winkul Mapu</dd>
+              </div>
+              <div>
+                <dt>Inicio del reclamo</dt>
+                <dd>10 de noviembre de 2017</dd>
+              </div>
+              <div>
+                <dt>Estado</dt>
+                <dd>Disputa territorial y judicial abierta</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · ENTENDER -->
+      <section class="conflict section" id="disputa" aria-labelledby="disputa-title">
+        <header class="section-heading section-heading-wide reveal">
+          <h2 id="disputa-title">Un mismo espacio, <span class="tone-arena">dos formas de nombrarlo</span></h2>
+          <p>
+            La disputa no se limita a quién figura en un documento. También pone en tensión qué significa habitar,
+            recordar y pertenecer a un territorio.
+          </p>
+        </header>
+
+        <div class="contrast-list">
+          <article class="contrast-item reveal">
+            <button type="button" aria-expanded="false">
+              <span class="contrast-primary">Propiedad</span>
+              <span class="contrast-symbol" aria-hidden="true">≠</span>
+              <span class="contrast-secondary">Pertenencia</span>
+               <span class="contrast-action" aria-hidden="true">↓</span>
+            </button>
+            <div class="contrast-detail">
+              <p>
+                La propiedad se acredita mediante títulos y registros. La pertenencia ancestral incorpora memoria
+                colectiva, continuidad cultural y vínculos que preceden a esos documentos.
+              </p>
+            </div>
+          </article>
+
+          <article class="contrast-item reveal">
+            <button type="button" aria-expanded="false">
+              <span class="contrast-primary">Superficie</span>
+              <span class="contrast-symbol" aria-hidden="true">≠</span>
+              <span class="contrast-secondary">Territorio</span>
+               <span class="contrast-action" aria-hidden="true">↓</span>
+            </button>
+            <div class="contrast-detail">
+              <p>
+                Una superficie puede medirse y dividirse. Un territorio también reúne prácticas, relaciones,
+                recorridos, historias y sitios de significación espiritual.
+              </p>
+            </div>
+          </article>
+
+          <article class="contrast-item reveal">
+            <button type="button" aria-expanded="false">
+              <span class="contrast-primary">Ocupación</span>
+              <span class="contrast-symbol" aria-hidden="true">≠</span>
+              <span class="contrast-secondary">Recuperación</span>
+               <span class="contrast-action" aria-hidden="true">↓</span>
+            </button>
+            <div class="contrast-detail">
+              <p>
+                “Ocupación” es el término utilizado en expedientes y acusaciones. La comunidad denomina
+                “recuperación territorial” a su regreso a tierras que reivindica como ancestrales.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03 · REWE -->
+      <section class="rewe section" id="rewe" aria-labelledby="rewe-title">
+                <div class="rewe-intro">
+          <header class="rewe-heading reveal">
+            <p class="rewe-word" aria-hidden="true">Rewe</p>
+            <h2 id="rewe-title">El territorio también es un <span class="tone-beige">espacio espiritual</span></h2>
+          </header>
+
+          <figure class="rewe-figure reveal">
+                        <div
+              class="photo rewe-photo"
+              style="--img: url('fotos/img1.png')"
+              role="img"
+              aria-label="Manos que sostienen hierbas ceremoniales"
+            >
+              <span class="photo-slot" aria-hidden="true">fotos/img1.png</span>
+            </div>
+           
+          </figure>
+        </div>
+
+        <div class="rewe-grid">
+          <article class="rewe-card reveal">
+            <p class="card-number">[ 01 ]</p>
+            <h3>¿Qué es?</h3>
+            <p>
+              El rewe es un espacio ceremonial de importancia espiritual para la comunidad Lof Lafken Winkul Mapu,
+              vinculado a sus prácticas culturales y al rol de la machi Betiana Colhuan Nahuel.
+            </p>
+          </article>
+
+          <article class="rewe-card reveal">
+            <p class="card-number">[ 02 ]</p>
+            <h3>¿Por qué importa?</h3>
+            <p>
+              Para la comunidad, la tierra no es solamente una propiedad o un espacio físico: articula pertenencia,
+              identidad, cuidado, memoria y conexión espiritual.
+            </p>
+          </article>
+
+          <article class="rewe-card rewe-card-highlight reveal">
+            <p class="card-number">[ 03 ]</p>
+            <h3>¿Qué se acordó?</h3>
+            <p>
+              El 1 de junio de 2023, el Estado y representantes mapuche alcanzaron un acuerdo que reconocía el rewe
+              como lugar sagrado y contemplaba medidas para su acceso y protección. En agosto de 2024, Casación anuló
+              su homologación judicial.
+            </p>
+          </article>
+        </div>
+
+        <div class="glossary reveal" aria-labelledby="glosario-title">
+          <h3 class="glossary-title" id="glosario-title">
+            <span class="eyebrow">Glosario mapuche</span> Palabras que hablan de identidad
+          </h3>
+          <dl>
+            <div>
+              <dt>Lof</dt>
+              <dd>
+                La comunidad como forma de organización social mapuche, basada en vínculos familiares, comunitarios
+                y territoriales. Un espacio de pertenencia donde se comparten conocimientos, responsabilidades y
+                prácticas culturales.
+              </dd>
+            </div>
+            <div>
+              <dt>Machi</dt>
+              <dd>
+                Autoridad espiritual vinculada con la sanación, las ceremonias y la relación entre las personas y
+                las fuerzas de la naturaleza. Su función es reconocida dentro de la comunidad.
+              </dd>
+            </div>
+            <div>
+              <dt>Rewe</dt>
+              <dd>
+                Elemento sagrado de la vida ceremonial, de gran importancia espiritual, especialmente para la machi.
+                Su significado está ligado a la relación con el entorno y a la cosmovisión mapuche.
+              </dd>
+            </div>
+            <div>
+              <dt>Territorio ancestral</dt>
+              <dd>
+                Mucho más que una extensión de tierra: un espacio donde la comunidad mantiene o reivindica vínculos
+                históricos, culturales y espirituales, y una memoria transmitida entre generaciones.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 04 · CRONOLOGÍA -->
+      <section class="timeline section" id="cronologia" aria-labelledby="cronologia-title">
+        <header class="section-heading section-heading-wide reveal">
+         
+          <h2 id="cronologia-title">La historia no empieza con<br /><span class="tone-arena">un expediente</span></h2>
+          <p>Una cronología mínima para ordenar nueve años de reclamos, operativos, acuerdos y fallos.</p>
+        </header>
+
+        <ol class="timeline-list">
+          <li class="timeline-item reveal">
+            <p class="timeline-index">01</p>
+            <time datetime="2017-11-10">10.11.2017</time>
+            <div>
+              <h3>Inicio de la recuperación territorial</h3>
+              <p>
+                Integrantes de la Lof Lafken Winkul Mapu ingresan a un predio de la Administración de Parques
+                Nacionales en el kilómetro 2006 de la Ruta 40.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-dark reveal">
+            <p class="timeline-index">02</p>
+            <time datetime="2017-11-25">25.11.2017</time>
+            <div>
+              <h3>Muerte de Rafael Nahuel</h3>
+              <p>
+                El joven mapuche de 22 años muere por un disparo durante un operativo del Grupo Albatros de
+                Prefectura. El hecho se convierte en un punto central del conflicto y de los reclamos de justicia.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <p class="timeline-index">03</p>
+            <time datetime="2020">2020</time>
+            <div>
+              <h3>Nuevas causas y órdenes de restitución</h3>
+              <p>
+                La Justicia provincial formula cargos por la ocupación de un lote perteneciente al Obispado de San
+                Isidro y dispone su restitución, mientras continúa el reclamo territorial.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-oxido reveal">
+            <p class="timeline-index">04</p>
+            <time datetime="2022-10-04">04.10.2022</time>
+            <div>
+              <h3>Operativo federal y desalojo</h3>
+              <p>
+                Fuerzas federales desalojan los predios. La CIDH registró la detención de siete mujeres y cinco
+                niños, y realizó un seguimiento de la situación de derechos humanos.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-verde reveal">
+            <p class="timeline-index">05</p>
+            <time datetime="2023-06-01">01.06.2023</time>
+            <div>
+              <h3>Acuerdo sobre el espacio ceremonial</h3>
+              <p>
+                El Estado y representantes mapuche acuerdan reconocer el rewe como lugar sagrado y avanzar en la
+                reubicación de la comunidad en otras tierras aptas y suficientes.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <p class="timeline-index">06</p>
+            <time datetime="2023-11-29">29.11.2023</time>
+            <div>
+              <h3>Condenas por la muerte de Rafael Nahuel</h3>
+              <p>
+                El Tribunal Oral Federal de General Roca condena a cinco integrantes del Grupo Albatros de
+                Prefectura por homicidio agravado con exceso en la legítima defensa.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-arena reveal">
+            <p class="timeline-index">07</p>
+            <time datetime="2024-08-15">15.08.2024</time>
+            <div>
+              <h3>Se anula la homologación del acuerdo</h3>
+              <p>
+                La Cámara Federal de Casación Penal hace lugar a los recursos de la fiscalía y de vecinos de Villa
+                Mascardi y deja sin efecto la homologación judicial del acuerdo de 2023.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <p class="timeline-index">08</p>
+            <time datetime="2025-05-26">26.05.2025</time>
+            <div>
+              <h3>Condenas por usurpación</h3>
+              <p>
+                Seis integrantes de la comunidad reciben penas de ejecución en suspenso por la ocupación de predios
+                públicos y privados de Villa Mascardi.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-beige reveal">
+            <p class="timeline-index">09</p>
+            <time datetime="2026-07-07">07.07.2026</time>
+            <div>
+              <h3>Casación revoca las condenas</h3>
+              <p>
+                La Sala II de la Cámara Federal de Casación Penal deja sin efecto las condenas y absuelve a las seis
+                personas acusadas en esa causa.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-dark reveal">
+            <p class="timeline-index">10</p>
+            <time datetime="2026-09">08—09.2026</time>
+            <div>
+              <h3>El conflicto judicial continúa</h3>
+              <p>
+                La fiscalía, Parques Nacionales y querellas particulares presentan recursos extraordinarios para que
+                el fallo sea revisado. La absolución no constituye todavía el cierre definitivo del conflicto.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 05 · DERECHOS -->
+      <section class="rights section" id="derechos" aria-labelledby="derechos-title">
+        <div class="rights-sticky">
+          <h2 id="derechos-title">Lo ancestral también<br /><span class="tone-arena">está escrito</span></h2>
+          <p>
+            El reconocimiento legal existe. La tensión aparece en su aplicación, en la delimitación territorial y en
+            el modo en que se tramitan los reclamos.
+          </p>
+
+          <dl class="expediente" aria-label="Ficha del expediente">
+            <div><dt>Expediente Nº</dt><dd>001</dd></div>
+            <div><dt>Territorio</dt><dd>Villa Mascardi</dd></div>
+            <div><dt>Comunidad</dt><dd>Lafken Winkul Mapu</dd></div>
+            <div><dt>Período</dt><dd>2017—2026</dd></div>
+          </dl>
+        </div>
+
+        <div class="rights-documents">
+          <article class="document reveal">
+            <header>
+              <span>CN.ARG</span>
+              <span>ART. 75 · INC. 17</span>
+            </header>
+            <p class="document-quote">
+              “Reconocer la preexistencia étnica y cultural de los pueblos indígenas argentinos.”
+            </p>
+            <p>
+              La Constitución reconoce la personería jurídica de sus comunidades y la posesión y propiedad
+              comunitarias de las tierras que tradicionalmente ocupan.
+            </p>
+            <a href="#fuente-01">Fuente [01] ↗</a>
+          </article>
+
+          <article class="document document-beige reveal">
+            <header>
+              <span>OIT</span>
+              <span>CONVENIO 169 · ART. 13—14</span>
+            </header>
+            <p class="document-quote">La relación con la tierra también comprende sus dimensiones colectivas.</p>
+            <p>
+              El Convenio exige respetar la importancia cultural y espiritual de los territorios, además de reconocer
+              derechos de propiedad y posesión sobre las tierras tradicionalmente ocupadas.
+            </p>
+            <a href="#fuente-02">Fuente [02] ↗</a>
+          </article>
+
+          <article class="document document-oxido reveal">
+            <header>
+              <span>LEY 26.160 · 2006</span>
+              <span>DNU 1083/2024</span>
+            </header>
+            <p class="document-quote">Una protección que cambió.</p>
+            <p>
+              Declaró la emergencia en materia de posesión y propiedad de las tierras que tradicionalmente ocupan las
+              comunidades indígenas, suspendió desalojos y ordenó relevamientos territoriales. Fue prorrogada en
+              2009, 2013, 2017 y 2021.
+            </p>
+            <p>
+              El 9 de diciembre de 2024, el DNU 1083/2024 derogó la última prórroga y dio por finalizada la
+              emergencia y la suspensión de desalojos. El artículo 75, inciso 17, sigue vigente.
+            </p>
+            <a href="#fuente-12">Fuente [12] ↗</a>
+            <a href="#fuente-13">Fuente [13] ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 06 · LABORATORIO TIPOGRÁFICO -->
+      <section class="voice section" id="voz" aria-labelledby="voz-title">
+        <header class="section-heading section-heading-wide reveal">
+          <h2 id="voz-title">Dale peso a<br /><span class="tone-oxido">una idea</span></h2>
+          <p>
+            Escribí lo que no debería quedar fuera del mapa. Modificá la escala y el peso de la voz con los ejes
+            variables de DM Sans.
+          </p>
+        </header>
+
+        <div class="type-lab reveal" data-type-lab>
+          <div class="type-output-wrap">
+            <p
+              class="type-output"
+              data-type-output
+              contenteditable="true"
+              role="textbox"
+              aria-multiline="true"
+              spellcheck="false"
+            >
+              El territorio también es memoria.
+            </p>
+            <p class="edit-hint">Hacé clic sobre la frase para editarla.</p>
+          </div>
+
+          <div class="type-controls">
+            <label>
+              <span>Peso de la voz</span>
+              <output for="font-weight" data-weight-output>720</output>
+              <input id="font-weight" data-weight type="range" min="100" max="1000" value="720" step="1" />
+            </label>
+            <label>
+              <span>Escala óptica</span>
+              <output for="font-opsz" data-opsz-output>40</output>
+              <input id="font-opsz" data-opsz type="range" min="9" max="40" value="40" step="0.1" />
+            </label>
+            <button type="button" data-reset-type>Restablecer ↺</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · PRESENTE / CTA -->
+      <section class="present section" id="presente" aria-labelledby="presente-title">
+        <div class="photo present-photo" style="--img: url('assets/img/comunidad.jpg')" aria-hidden="true">
+          <span class="photo-slot">assets/img/comunidad.jpg</span>
+        </div>
+
+        <div class="present-grid">
+          <div class="present-status reveal">
+            <div class="status-signal" aria-hidden="true"><span></span> Actualización 14.10.2026</div>
+          </div>
+
+          <div class="present-copy reveal">
+            <h2 id="presente-title">El conflicto <span class="tone-arena">no está cerrado</span></h2>
+            <p>
+              Los fallos cambian. Los recursos continúan. Comprender el territorio exige mirar más allá del último
+              titular y sostener una lectura crítica de las fuentes.
+            </p>
+            <p class="present-call">Informarse también es tomar posición.</p>
+            <div class="present-actions">
+              <a href="#fuentes">Revisar las fuentes ↘</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="closing-word" aria-hidden="true">
+          <span>Lafken</span><span>Winkul</span><span>Mapu</span>
+        </p>
+      </section>
+    </main>
+
+    <!-- LEGALES / CRÉDITOS -->
+    <footer class="legal" id="fuentes">
+      <div class="legal-header">
+        <p>Créditos, fuentes y condiciones de lectura</p>
+        <a href="#inicio">Volver arriba ↑</a>
+      </div>
+
+      <div class="legal-grid">
+        <section>
+          <h2>Equipo</h2>
+          <p>Groppa, Paula Costanza</p>
+          <p>Mangino, Ramiro</p>
+          <p>Ronco, Gimena</p>
+        </section>
+
+        <section>
+          <h2>Contexto académico</h2>
+          <p>Tipografía II</p>
+          <p>Cátedra Cosgaya</p>
+          <p>Universidad de Buenos Aires</p>
+          <p>2026</p>
+        </section>
+
+        <section>
+          <h2>Tipografía</h2>
+          <p><strong>Acumin Pro Wide</strong> · Títulos · Adobe Fonts</p>
+          <p><strong>Source Serif 4</strong> · Lectura y destacados · SIL OFL 1.1</p>
+          <p><strong>DM Sans Variable</strong> · Subtítulos y citas · opsz 9—40 / wght 100—1000 · SIL OFL 1.1</p>
+          <a href="assets/fonts/OFL.txt">Leer licencia ↗</a>
+        </section>
+
+        <section>
+          <h2>Criterio editorial</h2>
+          <p>
+            Proyecto académico de carácter informativo. Se diferencia entre hechos documentados, decisiones
+            judiciales y posicionamientos de los actores involucrados. Última revisión: 14 de octubre de 2026.
+          </p>
+        </section>
+      </div>
+
+      <div class="sources">
+        <h2>Fuentes consultadas</h2>
+        <ol>
+          <li id="fuente-01">
+            <span>[01]</span>
+            <p>Argentina.gob.ar — Constitución Nacional, artículo 75 inciso 17.</p>
+            <a href="https://www.argentina.gob.ar/node/100452" target="_blank" rel="noreferrer">Abrir ↗</a>
+          </li>
+          <li id="fuente-02">
+            <span>[02]</span>
+            <p>Organización Internacional del Trabajo — Convenio 169, artículos 13 y 14.</p>
+            <a
+              href="https://normlex.ilo.org/dyn/nrmlx_es/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID,P12100_LANG_CODE:312314"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-03">
+            <span>[03]</span>
+            <p>Comisión Interamericana de Derechos Humanos — Informe anual 2022, capítulo IV.A, párr. 45–46.</p>
+            <a href="https://scm.oas.org/PDFS/2023/CIDH/IA2022_Cap_4A_ES.pdf" target="_blank" rel="noreferrer">Abrir ↗</a>
+          </li>
+          <li id="fuente-04">
+            <span>[04]</span>
+            <p>
+              CELS — “Villa Mascardi: hubo acuerdo entre el gobierno nacional y la comunidad mapuche Lafken Winkul”,
+              02.06.2023.
+            </p>
+            <a
+              href="https://www.cels.org.ar/web/2023/06/villa-mascardi-hubo-acuerdo-entre-el-gobierno-nacional-y-la-comunidad-mapuche-lafken-winkul/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-05">
+            <span>[05]</span>
+            <p>
+              Ministerio Público Fiscal — Requerimiento de elevación a juicio por los hechos iniciados en noviembre
+              de 2017.
+            </p>
+            <a
+              href="https://www.fiscales.gob.ar/fiscalias/bariloche-la-fiscalia-pidio-juicio-oral-para-siete-integrantes-de-una-comunidad-mapuche-por-la-usurpacion-de-un-predio-de-villa-mascardi-en-2017/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-06">
+            <span>[06]</span>
+            <p>Ministerio Público Fiscal — Sentencia por la muerte de Rafael Nahuel, 30.11.2023.</p>
+            <a
+              href="https://www.fiscales.gob.ar/violencia-institucional/general-roca-el-tribunal-considero-que-rafael-nahuel-fue-asesinado-con-exceso-en-la-legitima-defensa-e-impuso-penas-de-hasta-cinco-anos-de-prision/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-07">
+            <span>[07]</span>
+            <p>Ministerio Público de Río Negro — Imputación y restitución de un predio de Villa Mascardi, 22.10.2020.</p>
+            <a
+              href="https://ministeriopublico.jusrionegro.gov.ar/nota/4356/villa-mascardi-imputan-usurpacion-de-un-predio-a-miembros-de-lof-lafken-winkul-mapu-y-disponen-su-restitucion"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-08">
+            <span>[08]</span>
+            <p>El Cordillerano — Revisión de las condenas dictadas el 26.05.2025, 10.07.2025.</p>
+            <a
+              href="https://www.elcordillerano.com.ar/noticias/2025/07/10/216749-villa-mascardi-la-justicia-admite-revisar-las-condenas-a-seis-integrantes-de-lafken-winkul-mapu"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-09">
+            <span>[09]</span>
+            <p>InfoTerritorial — Casación absolvió a integrantes de la Lof Lafken Winkul Mapu, 08.07.2026.</p>
+            <a
+              href="https://infoterritorial.com.ar/casacion-absolvio-a-integrantes-de-lof-lafken-winkul-mapu/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-10">
+            <span>[10]</span>
+            <p>La Nación — Recursos extraordinarios contra la absolución, 01.09.2026.</p>
+            <a
+              href="https://www.lanacion.com.ar/politica/advierten-que-un-fallo-favorable-a-la-comunidad-mapuche-siembra-dudas-sobre-el-delito-de-usurpacion-nid01092026/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-11">
+            <span>[11]</span>
+            <p>Argentina.gob.ar — Coordenadas oficiales de Villa Mascardi.</p>
+            <a href="https://www.argentina.gob.ar/normativa/364965_res798-2_pdf/archivo" target="_blank" rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-12">
+            <span>[12]</span>
+            <p>Argentina.gob.ar — Ley 26.160 de emergencia en materia de posesión y propiedad de tierras indígenas, 2006.</p>
+            <a href="https://www.argentina.gob.ar/normativa/nacional/122499/texto" target="_blank" rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-13">
+            <span>[13]</span>
+            <p>Boletín Oficial — Decreto de Necesidad y Urgencia 1083/2024, 09.12.2024.</p>
+            <a
+              href="https://www.boletinoficial.gob.ar/detalleAviso/primera/317918/20241210"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-14">
+            <span>[14]</span>
+            <p>La Nación — Casación anuló el fallo que homologaba el acuerdo en Villa Mascardi, 15.08.2024.</p>
+            <a
+              href="https://www.lanacion.com.ar/politica/casacion-anulo-un-fallo-que-le-daba-el-uso-exclusivo-de-terrenos-a-una-comunidad-mapuche-en-villa-nid15082024/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir ↗</a
+            >
+          </li>
+          <li id="fuente-15">
+            <span>[15]</span>
+            <p>Las12 / Página/12 — Entrevista a Betiana Colhuan Nahuel, por Laura Litvinoff, 02.06.2023.</p>
+            <!-- TODO: agregar el enlace de la entrevista -->
+            <span class="source-pending">Enlace pendiente</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="legal-bottom">
+        <p class="signature">La tierra tiene memoria · Lafken Winkul Mapu / Villa Mascardi</p>
+        <p class="color-bar" aria-hidden="true"><i></i><i></i><i></i><i></i></p>
+        <p>UBA · FADU · Tipografía II · 2026</p>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+  </body>
+</html>
