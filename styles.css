@@ -588,6 +588,9 @@ button {
 .collage-photo {
   aspect-ratio: 16 / 9;
 }
+.collage-photo::before {
+  filter: none;
+}
 
 .collage-papers {
   position: absolute;
@@ -661,7 +664,7 @@ button {
   min-height: min(72vw, 48rem);
   overflow: hidden;
   color: var(--crema);
-  background: var(--verde);
+  background: var(--verde) url("fotos/img4.png") center / cover no-repeat;
   cursor: crosshair;
 }
 
@@ -750,7 +753,7 @@ button {
 .live-coordinate {
   position: absolute;
   bottom: 1rem;
-  left: 1rem;
+  right: 1rem;
   z-index: 4;
   display: flex;
   gap: 1rem;
@@ -1117,7 +1120,6 @@ button {
   color: var(--crema);
   background: var(--verde);
 }
-
 .timeline-item-arena {
   color: var(--negro);
   background: var(--arena);
