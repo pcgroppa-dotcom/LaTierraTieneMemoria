@@ -1068,9 +1068,17 @@ button {
 
 /* ---------- 04 · CRONOLOGÍA ---------- */
 
-.timeline {
+.timeline.section {
   padding-right: 0;
+  padding-bottom: 0;
   padding-left: 0;
+}
+
+.timeline::after {
+  display: block;
+  height: clamp(5rem, 10vw, 10rem);
+  content: "";
+  background: var(--oliva);
 }
 
 .timeline .section-heading {
@@ -1404,7 +1412,7 @@ button {
 }
 
 .present-photo::before {
-  opacity: 0.42;
+  opacity: 0.6;
 }
 
 .present-photo::after {
@@ -1419,10 +1427,26 @@ button {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+  gap: 2.5rem clamp(2rem, 6vw, 6rem);
 }
 
+.present-status,
+.present-copy {
+  grid-column: 1;
+}
+
+.present-figure {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+}
+
+.present-figure .photo {
+  height: 100%;
+  min-height: 26rem;
+  background: none;
+}
 .status-signal {
   display: flex;
   align-items: center;
@@ -1503,15 +1527,22 @@ button {
   background: var(--crema);
 }
 
+.closing {
+  position: relative;
+  margin: 14vh calc(var(--page-pad) * -1) 0;
+  padding-top: 4vw;
+}
+
 .closing-word {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  margin: 14vh 0 -0.08em -0.04em;
+  margin: 0 0 -0.1em;
   color: var(--crema);
-  font-size: clamp(4rem, 14.5vw, 19rem);
-  line-height: 0.82;
+  font-size: 19.1vw;
+  line-height: 0.8;
+  white-space: nowrap;
 }
 
 /* ---------- PIE ---------- */
@@ -2002,6 +2033,16 @@ button {
   .present-grid {
     grid-template-columns: 1fr;
   }
+  .present-figure {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .present-figure .photo {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
 
  .present-copy > p:not(.present-call) {
     margin-top: 2rem;
@@ -2011,9 +2052,8 @@ button {
     margin-top: 4rem;
   }
 
-  .closing-word {
+  .closing {
     margin-top: 6rem;
-    font-size: 16.5vw;
   }
 
   .legal-grid {
